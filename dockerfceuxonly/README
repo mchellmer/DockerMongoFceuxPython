@@ -1,0 +1,8 @@
+Build the docker image from /fceuxonly
+>Sudo docker build -t fceuxonly .
+
+# TODO: No Sound (see below error)
+# Loading SDL sound with alsa driver... / ALSA lib pcm_mmap.c:341:(snd_pcm_mmap) mmap failed: Invalid argument / Couldn't set hardware audio parameters: Success
+
+Run
+>sudo docker run -ti --rm --device /dev/snd --group-add audio -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix fceuxonly

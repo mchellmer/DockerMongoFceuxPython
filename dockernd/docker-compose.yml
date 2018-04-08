@@ -1,0 +1,15 @@
+app:
+  build: .
+  command: bash -c "python3 -u /dockernd/python/mImport.py && python3 /dockernd/python/NostalgiaDrive/NostalgiaDrive/nd.py"
+  volumes:
+    - .:/dockernd
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - /dev/snd:/dev/snd
+  links:
+    - db
+  environment:
+    - DISPLAY=:0.0
+db:
+  image: mongo:latest
+  ports:
+      - '27017:27017'
