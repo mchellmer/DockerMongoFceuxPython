@@ -11,7 +11,7 @@ print("Mongo Client Initialised")
 db = mc.nd
 print("Database Initialised")
 
-p = os.path.join('..', 'dockernd', 'python', 'nesGamesfinal.tsv')
+p = os.path.join('..', 'python', 'nesGamesfinal.tsv')
 
 with open(p) as fd:
     rd = csv.reader(fd, delimiter="\t")
