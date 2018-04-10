@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Add all files
-ADD . dockernd
+COPY . dockernd
 
 # Install setup python stuff
 RUN apt-get update && apt-get install -y python3-pip python3-dev && pip3 install --upgrade pip && apt-get install -y python3-tk

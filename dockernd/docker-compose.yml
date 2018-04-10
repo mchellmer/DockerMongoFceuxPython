@@ -5,10 +5,18 @@ app:
     - .:/dockernd
     - /tmp/.X11-unix:/tmp/.X11-unix
     - /dev/snd:/dev/snd
+    - /run/dbus/:/run/dbus/:rw
+    - /dev/shm:/dev/shm
+    - /etc/machine-id:/etc/machine-id
+    - /run/user/$uid/pulse:/run/user/$uid/pulse
+    - /var/lib/dbus:/var/lib/dbus
+    - ~/.pulse:/home/$dockerUsername/.pulse
   links:
     - db
   environment:
     - DISPLAY=:0.0
+  devices:
+    - /dev/snd:/dev/snd
 db:
   image: mongo:latest
   ports:
