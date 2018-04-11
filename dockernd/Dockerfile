@@ -14,5 +14,9 @@ RUN yes | cp -rf /dockernd/cheat.cpp /dockernd/fceux223/src/cheat.cpp
 WORKDIR dockernd/fceux223
 RUN scons install
 
+RUN mkdir ../../root/.fceux
+
+RUN yes | cp ../../dockernd/python/NostalgiaDrive/NostalgiaDrive/docs/config/fceux.cfg ../../root/.fceux/fceux.cfg
+
 # Run with sudo docker run -ti --rm --device /dev/snd --group-add audio -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
 
