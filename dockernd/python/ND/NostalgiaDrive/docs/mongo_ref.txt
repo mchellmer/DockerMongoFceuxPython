@@ -1,0 +1,36 @@
+Ubuntu quick ref for mongodb (installation assumed)
+1. Start mongodb service
+>sudo service mongodb start
+
+2. Enter Shell
+>mongo
+
+3. View all dbs (local will exist by default)
+>show dbs
+
+4. Generate a db with name [dbname], you will be in a newly created db
+>use dbname
+
+5. Print current database to confirm
+>db
+
+6. Add collection and JSON
+>db.mycol.insert({"name": "Mark"})
+(from tsv)
+mongoimport --db nd --collection games  --type tsv --file nesGamesfinal.tsv --headerline
+
+7. Display collections in database (this will show mycol)
+>show collections
+
+8. Grab documents in a collection (will display key and JSON in the collection)
+>db.mycol.find
+
+9. In statement
+>db.mycol.find({ field: { $in: [<value1>, <value2>, ... <valueN> ] } })
+
+-----Troubleshooting-----
+"Connection Refused"
+sudo rm /var/lib/mongodb/mongod.lock
+sudo mongod --repair
+sudo service mongodb start
+sudo service mongodb status

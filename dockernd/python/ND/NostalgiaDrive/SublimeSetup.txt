@@ -1,0 +1,8 @@
+install package control from command palatte (CTRL SHJIFT P)
+install predawn
+install material theme
+preference>settings>https://github.com/CoreyMSchafer/dotfiles/blob/master/init/Preferences.sublime-settings
+install brackethighlighter
+install sidebarenhancement
+install anaconda
+preferences>Package Settings>Anaconda>https://github.com/CoreyMSchafer/dotfiles/blob/master/init/Anaconda.sublime-settings
