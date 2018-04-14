@@ -30,7 +30,7 @@ class NdMongo():
 
     def outText(self, name, strName):
         filename = strName + '.txt'
-        outpath = path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive', 'docs', 'selections', filename)
+        outpath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'selections', filename)
         file = open(outpath, 'w')
         for item in name:
             if (item != '') and (item != '-'):

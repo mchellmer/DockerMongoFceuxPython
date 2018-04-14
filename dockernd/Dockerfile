@@ -16,4 +16,4 @@ RUN scons install
 
 RUN mkdir ../../root/.fceux
 
-RUN yes | cp ../../dockernd/python/NostalgiaDrive/NostalgiaDrive/docs/config/fceux.cfg ../../root/.fceux/fceux.cfg
+RUN yes | cp ../../dockernd/python/ND/NostalgiaDrive/docs/config/fceux.cfg ../../root/.fceux/fceux.cfg

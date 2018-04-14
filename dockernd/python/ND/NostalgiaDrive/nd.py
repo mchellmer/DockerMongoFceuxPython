@@ -10,13 +10,13 @@ mDb = nd.ndMongo.NdMongo()
 y = nd.ndGui.NdGui()
 
 # Grab selections from log and query db
-logPath = path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive', 'docs', 'log.txt')
+logPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'log.txt')
 selection = mDb.queryGames(logPath)
 print(repr(selection))
-gamePath = path.join('..', 'python', 'NostalgiaDrive', 'data', 'Nintendo', selection).rstrip()
+gamePath = path.join('..', 'python', 'ND', 'data', 'Nintendo', selection).rstrip()
 
 # Run script
-sPath = path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive', 'docs', 'scripts', 'basic.sh')
+sPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'scripts', 'basic.sh')
 system("fceux " + "\"" + gamePath + "\"")
 
 # Close connection to database

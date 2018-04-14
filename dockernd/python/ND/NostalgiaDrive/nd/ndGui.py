@@ -36,7 +36,7 @@ class NdGui:
         # TODO: DRY because can't figure out how to dynamically set command
         simH = self.sHeight/3 - 20
         shift = 0.25 * (self.sWidth - simH*3)
-        basep = os.path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive')
+        basep = os.path.join('..', 'python', 'ND', 'NostalgiaDrive')
 
         label = Label(self.ndMain, text = '')
         label.grid(column = 0, row = 0, padx=shift)
@@ -187,7 +187,7 @@ class NdGui:
     def goPlay(self, *args):
         print("Selection Entered")
 
-        outpath = os.path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive', 'docs', 'log.txt')
+        outpath = os.path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'log.txt')
         file = open(outpath, 'w')
         now = datetime.datetime.now()
         file.write('\n' + str(now) + ': Start Selections' + '\n')
@@ -206,7 +206,7 @@ class NdGui:
     def getTextOptions(self, item):
         print("Grabbing Options from File")
         filename = item + '.txt'
-        gPath = os.path.join('..', 'python', 'NostalgiaDrive', 'NostalgiaDrive', 'docs', 'selections', filename)
+        gPath = os.path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'selections', filename)
         f = open(gPath, 'r')
         lines = f.readlines()[:-1]
         lines.sort()
