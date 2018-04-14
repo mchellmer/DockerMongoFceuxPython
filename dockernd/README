@@ -1,0 +1,21 @@
+Raspberry Pi Instructions
+
+Flash Hypriot Image onto SD
+1. Follow directions from this site (Windows):
+http://blog.hypriot.com/getting-started-with-docker-and-windows-on-the-raspberry-pi/
+
+Boot Pi
+1. After initialisation finishes, press any button and login
+login: pirate
+password: hypriot (maybe, check above website)
+
+Pull NostalgiaDrive from github
+1. Type below into the terminal (5 min)
+git clone https://github.com/mchellmer/DockerMongoFceuxPython.git
+
+Build NostalgiaDrive
+1. Navigate to nd folder
+cd DockerMongoFceuxPython/dockernd
+
+2. Type the below in the terminal (30-90min)
+docker-compose Build
