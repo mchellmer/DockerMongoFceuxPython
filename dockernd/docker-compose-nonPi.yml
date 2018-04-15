@@ -18,6 +18,6 @@ app:
   devices:
     - /dev/snd:/dev/snd
 db:
-  image: nonoroazoro/rpi-mongo
+  image: mongo:latest
   ports:
       - '27017:27017'
