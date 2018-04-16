@@ -1,4 +1,5 @@
 Raspberry Pi Instructions
+################ MONGODB NOT SUPPORTED ON ARM THROUGH DOCKER #######################
 
 Flash Hypriot Image onto SD
 1. Follow directions from this site (Windows):
