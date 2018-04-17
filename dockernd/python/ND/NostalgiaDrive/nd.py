@@ -15,6 +15,16 @@ selection = mDb.queryGames(logPath)
 print(repr(selection))
 gamePath = path.join('..', 'python', 'ND', 'data', 'Nintendo', selection).rstrip()
 
+# Add selection to history
+hist = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'history.txt')
+with open(logPath, "r") as f1:
+    t1 = f1.readlines()
+with open(hist, "r") as f2:
+    t2 = f2.readlines()
+t2.insert(20, t1)
+with open(hist, "w") as f2:
+    f2.writelines(t2)
+
 # Run script
 sPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'scripts', 'basic.sh')
 system("fceux " + "\"" + gamePath + "\"")
