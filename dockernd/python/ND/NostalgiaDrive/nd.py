@@ -13,6 +13,12 @@ y = nd.ndGui.NdGui()
 logPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'log.txt')
 selection = mDb.queryGames(logPath)
 print(repr(selection))
+
+histPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'selections','hist.txt')
+f= open(histPath,"a+")
+f.write(selection)
+
+
 gamePath = path.join('..', 'python', 'ND', 'data', 'Nintendo', selection).rstrip()
 
 # Add selection to history
