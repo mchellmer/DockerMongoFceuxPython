@@ -18,7 +18,6 @@ histPath = path.join('..', 'python', 'ND', 'NostalgiaDrive', 'docs', 'selections
 f= open(histPath,"a+")
 f.write(selection)
 
-
 gamePath = path.join('..', 'python', 'ND', 'data', 'Nintendo', selection).rstrip()
 
 # Add selection to history
